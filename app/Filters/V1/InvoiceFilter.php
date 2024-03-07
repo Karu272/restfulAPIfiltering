@@ -10,7 +10,6 @@ class InvoiceFilter extends ApiFilter {
     protected $safeParms = [
         'customerId' => ['eq'],           // name equal to
         'amount' => ['eq', 'lt', 'gt', 'lte', 'gte'],           // type equal to
-        'email' => ['eq'],          // email equal to
         'status' => ['eq', 'ne'],        // address equal to & not equal to
         'billedDate' => ['eq', 'lt', 'gt', 'lte', 'gte'],           // city equal to & less than or equal to
         'paidDate' => ['eq', 'lt', 'gt', 'lte', 'gte'],          // state equal to
@@ -19,7 +18,7 @@ class InvoiceFilter extends ApiFilter {
     // Map the column names to their corresponding database column names
     protected $columnMap = [
         'customerId' => 'customer_id',
-        'billedDatate' => 'billed_date',
+        'billedDate' => 'billed_date',
         'paidDate' => 'paid_date',
     ];
 

@@ -1,0 +1,9 @@
+We need to cut down on the information we give to the ppl who use our API
+there for we use php artisan make:reasource V1/CustomerResource to make a file
+that will scale down on the columns we are showing in the API
+
+All we need to do is return an array with the right spellings because we use json
+which expected syntax is i different from Laravel and html
+
+this works only for 1 specific id in the API array. There for we make another file
+called CustumerCollection which we filter every id in the array the same way.

@@ -14,7 +14,7 @@ class CustomerResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        // Picking the fields we want to show from the database
+        // Picking the fields we want to show from the database for individual id in the api array
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -24,6 +24,8 @@ class CustomerResource extends JsonResource
             'city' => $this->city,
             'state' => $this->state,
             'postalCode' => $this->postal_code,
+            // This include Invoices from the InvoiceResource.php othervice NULL if not loaded
+            'invoices' => InvoiceResource::collection($this->whenLoaded('invoices')),
         ];
     }
 }

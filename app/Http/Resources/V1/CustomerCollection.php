@@ -14,6 +14,7 @@ class CustomerCollection extends ResourceCollection
      */
     public function toArray(Request $request): array
     {
+        // Filtering the fields we want to show from the api array with the help of CustomerResource
         return parent::toArray($request);
     }
 }
